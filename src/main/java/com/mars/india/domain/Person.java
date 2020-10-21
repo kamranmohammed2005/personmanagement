@@ -25,12 +25,12 @@ public class Person implements Serializable {
 	private Integer id;
 	
 	@NotNull(message = "is required")
-    @Size(min = 5, message = "is required")
+    @Size(min = 3, message = "is required")
 	@Column(name = "FIRST_NAME")
 	private String firstName;
 	
 	@NotNull(message = "is required")
-    @Size(min = 5, message = "is required")
+    @Size(min = 3, message = "is required")
 	@Column(name = "LAST_NAME")
 	private String lastName;
 

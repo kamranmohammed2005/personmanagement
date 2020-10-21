@@ -63,7 +63,7 @@ public class PersonController {
     	model.addAttribute("persons", personsDTO);
 
     	// This will resolve to /WEB-INF/jsp/records.jsp
-		return "records";
+		return "persons";
 	}
     
     /**
@@ -77,7 +77,7 @@ public class PersonController {
     	model.addAttribute("personAttribute", new Person());
 
     	// This will resolve to /WEB-INF/jsp/add-record.jsp
-    	return "add-record";
+    	return "add-Person";
 	}
  
     /**
@@ -90,7 +90,7 @@ public class PersonController {
 		personValidator.validate(person, result);
 		// Delegate to service
 		if(result.hasErrors()){
-	    	  return "add-record";
+	    	  return "add-Person";
 	      }else{
 	    	  personService.add(person);
 	      }
@@ -122,7 +122,7 @@ public class PersonController {
     	model.addAttribute("personAttribute", existingPerson);
 
     	// This will resolve to /WEB-INF/jsp/edit-record.jsp
-    	return "edit-record";
+    	return "edit-Person";
 	}
  
     /**

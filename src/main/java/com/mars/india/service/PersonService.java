@@ -64,10 +64,6 @@ public class PersonService {
 		
 		// Retrieve session from Hibernate
 		Session session = sessionFactory.getCurrentSession();
-		/*if(null == person.getFirstName() || null == person.getLastName()){
-			
-		}*/
-		// Persists to db
 		session.save(person);
 	}
 	
